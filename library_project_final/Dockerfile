@@ -1,5 +1,5 @@
 # ជ្រើសរើសប្រភេទ PHP (អាចប្តូរទៅ 8.3 បើ Laravel របស់អ្នកទាមទារ)
-FROM php:8.2-cli
+FROM php:8.3-fpm
 
 # ដំឡើងកម្មវិធីដែលចាំបាច់សម្រាប់ Server
 RUN apt-get update -y && apt-get install -y \

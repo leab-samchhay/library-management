@@ -28,4 +28,6 @@ RUN composer install --no-interaction --optimize-autoloader --no-dev
 EXPOSE 10000
 
 # បញ្ជាឱ្យ Laravel Server ដំណើរការនៅពេល Deploy ចប់
-CMD php artisan serve --host=0.0.0.0 --port=10000
+# CMD php artisan serve --host=0.0.0.0 --port=10000
+# ឧទាហរណ៍នៅក្នុង Dockerfile របស់អ្នក (ត្រង់កន្លែង Startup)
+CMD php artisan config:cache && php artisan route:cache && php artisan storage:link && apache2-foreground
